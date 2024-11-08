@@ -1,0 +1,6 @@
+<app-header></app-header>
+
+<div class="products-container">
+  <app-category-slider (categorySelected)="onCategorySelected($event)"></app-category-slider>
+  <app-product-list [categoryId]="selectedCategoryId"></app-product-list>
+</div>

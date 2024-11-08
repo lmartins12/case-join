@@ -1,0 +1,16 @@
+<header class="header">
+    <button class="btn" (click)="openManageCategoriesModal()">Gerenciar Categorias</button>
+    <h1 class="title">Join</h1>
+    <button class="btn" (click)="openManageProductsModal()">Gerenciar Produtos</button>
+</header>
+
+<app-manage-category
+*ngIf="showManageCategoriesModal"
+(close)="closeManageCategoriesModal()">
+</app-manage-category>
+
+<app-manage-product
+*ngIf="showManageProductsModal"
+(close)="closeManageProductsModal()">
+</app-manage-product>
+  

@@ -1,0 +1,63 @@
+<div class="modal" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <h2>Gerenciar Produto</h2>
+      <label for="action">Escolha uma ação:</label>
+      <select [(ngModel)]="action">
+        <option value="add">Adicionar</option>
+        <option value="remove">Remover</option>
+        <option value="update">Atualizar</option>
+      </select>
+  
+      <div *ngIf="action === 'add'">
+        <label for="productName">Nome do Produto:</label>
+        <input id="productName" [(ngModel)]="productName" />
+        
+        <label for="productPrice">Preço:</label>
+        <input type="number" id="productPrice" [(ngModel)]="productPrice" />
+        
+        <label for="category">Categoria:</label>
+        <select [(ngModel)]="categoryId">
+          <option *ngFor="let category of categories" [value]="category.id">
+            {{ category.name }}
+          </option>
+        </select>
+        
+        <button (click)="addProduct()">Adicionar Produto</button>
+      </div>
+  
+      <div *ngIf="action === 'remove'">
+        <label for="productToRemove">Selecione o Produto:</label>
+        <select [(ngModel)]="selectedProductId">
+          <option *ngFor="let product of products" [value]="product.id">
+            {{ product.name }}
+          </option>
+        </select>
+        <button (click)="removeProduct()">Remover Produto</button>
+      </div>
+  
+      <div *ngIf="action === 'update'">
+        <label for="productToUpdate">Selecione o Produto:</label>
+        <select [(ngModel)]="selectedProductId">
+          <option *ngFor="let product of products" [value]="product.id">
+            {{ product.name }}
+          </option>
+        </select>
+        
+        <label for="updatedName">Novo Nome:</label>
+        <input id="updatedName" [(ngModel)]="updatedProductName" />
+        
+        <label for="updatedPrice">Novo Preço:</label>
+        <input type="number" id="updatedPrice" [(ngModel)]="updatedProductPrice" />
+        
+        <label for="updatedCategory">Nova Categoria:</label>
+        <select [(ngModel)]="updatedCategoryId">
+          <option *ngFor="let category of categories" [value]="category.id">
+            {{ category.name }}
+          </option>
+        </select>
+        
+        <button (click)="updateProduct()">Atualizar Produto</button>
+      </div>
+    </div>
+</div>
+  

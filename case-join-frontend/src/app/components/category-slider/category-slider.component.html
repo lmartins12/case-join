@@ -1,0 +1,28 @@
+<div class="category-slider-container">
+    <button class="nav-button" (click)="scrollLeft()" [disabled]="!canScrollLeft">
+      &#8249;
+    </button>
+  
+    <div class="categories-wrapper" #categoriesWrapper (wheel)="onWheel($event)">
+      <button
+        class="category-button"
+        [ngClass]="{'active': selectedCategoryId === null}"
+        (click)="selectCategory(null)"
+      >
+        Todas
+      </button>
+      <button
+        *ngFor="let category of categories"
+        class="category-button"
+        [ngClass]="{'active': selectedCategoryId === category.id}"
+        (click)="selectCategory(category.id)"
+      >
+        {{ category.name }}
+      </button>
+    </div>
+  
+    <button class="nav-button" (click)="scrollRight()" [disabled]="!canScrollRight">
+      &#8250;
+    </button>
+</div>
+  

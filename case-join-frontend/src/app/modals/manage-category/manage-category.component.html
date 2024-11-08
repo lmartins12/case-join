@@ -1,0 +1,40 @@
+<div class="modal" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <h2>Gerenciar Categoria</h2>
+      <label for="action">Escolha uma ação:</label>
+      <select [(ngModel)]="action">
+        <option value="add">Adicionar</option>
+        <option value="remove">Remover</option>
+        <option value="update">Atualizar</option>
+      </select>
+  
+      <div *ngIf="action === 'add'">
+        <label for="categoryName">Nome da Categoria:</label>
+        <input id="categoryName" [(ngModel)]="categoryName" />
+        <button (click)="addCategory()">Adicionar Categoria</button>
+      </div>
+  
+      <div *ngIf="action === 'remove'">
+        <label for="categoryToRemove">Selecione a Categoria:</label>
+        <select [(ngModel)]="selectedCategoryId">
+          <option *ngFor="let category of categories" [value]="category.id">
+            {{ category.name }}
+          </option>
+        </select>
+        <button (click)="removeCategory()">Remover Categoria</button>
+      </div>
+  
+      <div *ngIf="action === 'update'">
+        <label for="categoryToUpdate">Selecione a Categoria:</label>
+        <select [(ngModel)]="selectedCategoryId">
+          <option *ngFor="let category of categories" [value]="category.id">
+            {{ category.name }}
+          </option>
+        </select>
+        <label for="updatedName">Novo Nome:</label>
+        <input id="updatedName" [(ngModel)]="updatedCategoryName" />
+        <button (click)="updateCategory()">Atualizar Categoria</button>
+      </div>
+    </div>
+</div>
+  
