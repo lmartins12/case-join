@@ -1,27 +1,27 @@
 # CaseJoinFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli) versão 16.2.16.
 
-## Development server
+## Servidor de Desenvolvimento
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Execute `ng serve` para iniciar o servidor de desenvolvimento. Depois, acesse `http://localhost:4200/` em seu navegador. A aplicação será recarregada automaticamente se você fizer alterações em algum dos arquivos de código-fonte.
 
-## Code scaffolding
+## Criação de Código (Code Scaffolding)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Execute `ng generate component nome-do-componente` para gerar um novo componente. Você também pode utilizar `ng generate directive|pipe|service|class|guard|interface|enum|module` para gerar outras partes do projeto.
 
-## Build
+## Build (Compilação)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Execute `ng build` para compilar o projeto. Os arquivos compilados serão armazenados no diretório `dist/`.
 
-## Running unit tests
+## Executando Testes Unitários
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Execute `ng test` para rodar os testes unitários usando o [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Executando Testes de Fim a Fim (E2E)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Execute `ng e2e` para rodar os testes de fim a fim utilizando a plataforma de sua escolha. Para usar este comando, é necessário primeiro adicionar um pacote que implemente funcionalidades de testes de ponta a ponta.
 
-## Further help
+## Ajuda Adicional
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para mais ajuda sobre o Angular CLI, utilize o comando `ng help` ou acesse a [documentação completa do Angular CLI](https://angular.io/cli).
